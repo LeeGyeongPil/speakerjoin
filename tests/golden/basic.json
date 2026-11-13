@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "options": {
+    "strategy": "overlap",
+    "unit": "auto",
+    "effective_unit": "word",
+    "fill_nearest": false,
+    "tolerance": 0.2,
+    "min_word_dur": 0.02,
+    "stt_format": "assemblyai",
+    "diarization_format": "rttm",
+    "diarization_exclusive": false
+  },
+  "report": {
+    "words_total": 5,
+    "words_untimed": 0,
+    "unassigned": 1,
+    "unassigned_ratio": 0.2,
+    "filled_nearest": 0,
+    "overlap_words": 0,
+    "overlap_ratio": 0.0,
+    "boundary_words": 5,
+    "boundary_ratio": 1.0,
+    "segments_multi_speaker": 1,
+    "segment_word_disagree": 2,
+    "segment_word_disagree_ratio": 0.4,
+    "speaker_changes": 1,
+    "dominant_speaker_share": 0.75,
+    "speech_without_words_sec": 0.0,
+    "talk_time": {
+      "SPEAKER_00": 1.9,
+      "SPEAKER_01": 1.1
+    },
+    "word_share": {
+      "SPEAKER_00": 0.25,
+      "SPEAKER_01": 0.75
+    }
+  },
+  "utterances": [
+    {
+      "speaker": "SPEAKER_00",
+      "start": 1.52,
+      "end": 1.9,
+      "text": "hello"
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 1.9,
+      "end": 3.0,
+      "text": "there how are"
+    },
+    {
+      "speaker": null,
+      "start": 3.0,
+      "end": 3.3,
+      "text": "you?"
+    }
+  ],
+  "words": [
+    {
+      "text": "hello",
+      "start": 1.52,
+      "end": 1.9,
+      "speaker": "SPEAKER_00",
+      "flags": [
+        "boundary"
+      ]
+    },
+    {
+      "text": "there",
+      "start": 1.9,
+      "end": 2.3,
+      "speaker": "SPEAKER_01",
+      "flags": [
+        "boundary"
+      ]
+    },
+    {
+      "text": "how",
+      "start": 2.6,
+      "end": 2.8,
+      "speaker": "SPEAKER_01",
+      "flags": [
+        "boundary"
+      ]
+    },
+    {
+      "text": "are",
+      "start": 2.8,
+      "end": 3.0,
+      "speaker": "SPEAKER_01",
+      "flags": [
+        "boundary"
+      ]
+    },
+    {
+      "text": "you?",
+      "start": 3.0,
+      "end": 3.3,
+      "speaker": null,
+      "flags": [
+        "boundary",
+        "unassigned"
+      ]
+    }
+  ]
+}

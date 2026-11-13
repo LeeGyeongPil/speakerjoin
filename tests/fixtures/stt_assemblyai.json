@@ -1,0 +1,12 @@
+{
+  "id": "example",
+  "status": "completed",
+  "text": "hello there how are you",
+  "words": [
+    {"text": "hello", "start": 1520, "end": 1900, "confidence": 0.99, "speaker": "A"},
+    {"text": "there", "start": 1900, "end": 2300, "confidence": 0.99, "speaker": "A"},
+    {"text": "how", "start": 2600, "end": 2800, "confidence": 0.98, "speaker": "B"},
+    {"text": "are", "start": 2800, "end": 3000, "confidence": 0.98, "speaker": "B"},
+    {"text": "you?", "start": 3000, "end": 3300, "confidence": 0.97, "speaker": "B"}
+  ]
+}

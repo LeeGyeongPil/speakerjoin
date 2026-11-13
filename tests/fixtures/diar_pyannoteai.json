@@ -1,0 +1,14 @@
+{
+  "jobId": "job-1",
+  "status": "succeeded",
+  "output": {
+    "diarization": [
+      {"speaker": "SPEAKER_00", "start": 0.0, "end": 2.0},
+      {"speaker": "SPEAKER_01", "start": 1.9, "end": 3.0}
+    ],
+    "exclusiveDiarization": [
+      {"speaker": "SPEAKER_00", "start": 0.0, "end": 1.9},
+      {"speaker": "SPEAKER_01", "start": 1.9, "end": 3.0}
+    ]
+  }
+}
