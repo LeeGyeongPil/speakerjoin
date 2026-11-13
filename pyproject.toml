@@ -1,0 +1,52 @@
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14"]
+build-backend = "uv_build"
+
+[project]
+name = "speakerjoin"
+version = "0.1.0"
+description = "Join speech-to-text output with speaker diarization into speaker-labelled transcripts and subtitles, with a numeric alignment quality report."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = []
+keywords = [
+  "diarization", "speech-to-text", "asr", "rttm", "srt", "webvtt",
+  "subtitles", "transcript", "speaker", "whisper",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Multimedia :: Sound/Audio :: Speech",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/LeeGyeongPil/speakerjoin"
+Issues = "https://github.com/LeeGyeongPil/speakerjoin/issues"
+Changelog = "https://github.com/LeeGyeongPil/speakerjoin/blob/main/CHANGELOG.md"
+
+[project.scripts]
+speakerjoin = "speakerjoin.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+extend-exclude = ["speakerjoin-demo", "examples/out"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

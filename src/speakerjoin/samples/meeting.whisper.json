@@ -1,0 +1,51 @@
+{
+  "_comment": "Synthetic practice sample written by hand (faster-whisper style). Not a real recording.",
+  "language": "en",
+  "segments": [
+    {"id": 0, "start": 0.0, "end": 2.4, "text": " Welcome everyone to the weekly sync", "words": [
+      {"word": " Welcome", "start": 0.00, "end": 0.50, "probability": 0.98},
+      {"word": " everyone", "start": 0.50, "end": 1.10, "probability": 0.97},
+      {"word": " to", "start": 1.10, "end": 1.25, "probability": 0.99},
+      {"word": " the", "start": 1.25, "end": 1.40, "probability": 0.99},
+      {"word": " weekly", "start": 1.40, "end": 1.90, "probability": 0.95},
+      {"word": " sync", "start": 1.90, "end": 2.40, "probability": 0.93}]},
+    {"id": 1, "start": 2.6, "end": 6.2, "text": " Next is Bob Thanks Alice I have two updates", "words": [
+      {"word": " Next", "start": 2.60, "end": 2.90, "probability": 0.98},
+      {"word": " is", "start": 2.90, "end": 3.10, "probability": 0.99},
+      {"word": " Bob", "start": 3.10, "end": 3.60, "probability": 0.96},
+      {"word": " Thanks", "start": 3.80, "end": 4.30, "probability": 0.97},
+      {"word": " Alice", "start": 4.30, "end": 4.80, "probability": 0.96},
+      {"word": " I", "start": 4.80, "end": 4.95, "probability": 0.99},
+      {"word": " have", "start": 4.95, "end": 5.20, "probability": 0.99},
+      {"word": " two", "start": 5.20, "end": 5.50, "probability": 0.98},
+      {"word": " updates", "start": 5.50, "end": 6.20, "probability": 0.97}]},
+    {"id": 2, "start": 6.6, "end": 8.8, "text": " Budget is fine wait no okay go", "words": [
+      {"word": " Budget", "start": 6.60, "end": 7.10, "probability": 0.95},
+      {"word": " is", "start": 7.10, "end": 7.25, "probability": 0.99},
+      {"word": " fine", "start": 7.25, "end": 7.70, "probability": 0.96},
+      {"word": " wait", "start": 7.75, "end": 7.75, "probability": 0.60},
+      {"word": " no", "start": 7.84, "end": 7.92, "probability": 0.80},
+      {"word": " okay", "start": 8.10, "end": 8.50, "probability": 0.97},
+      {"word": " go", "start": 8.50, "end": 8.80, "probability": 0.97}]},
+    {"id": 3, "start": 9.0, "end": 11.6, "text": " Let us start with the roadmap review now", "words": [
+      {"word": " Let", "start": 9.00, "end": 9.20, "probability": 0.98},
+      {"word": " us", "start": 9.20, "end": 9.40, "probability": 0.99},
+      {"word": " start", "start": 9.40, "end": 9.80, "probability": 0.98},
+      {"word": " with", "start": 9.80, "end": 9.95, "probability": 0.99},
+      {"word": " the", "start": 9.95, "end": 10.10, "probability": 0.99},
+      {"word": " roadmap", "start": 10.10, "end": 10.70, "probability": 0.94},
+      {"word": " review", "start": 10.70, "end": 11.30, "probability": 0.96},
+      {"word": " now", "start": 11.30, "end": 11.60, "probability": 0.97}]},
+    {"id": 4, "start": 12.2, "end": 14.8, "text": " Quick question about the 2027 deadline please", "words": [
+      {"word": " Quick", "start": 12.20, "end": 12.60, "probability": 0.97},
+      {"word": " question", "start": 12.60, "end": 13.10, "probability": 0.98},
+      {"word": " about", "start": 13.10, "end": 13.30, "probability": 0.99},
+      {"word": " the", "start": 13.30, "end": 13.45, "probability": 0.99},
+      {"word": " 2027"},
+      {"word": " deadline", "start": 13.95, "end": 14.50, "probability": 0.95},
+      {"word": " please", "start": 14.50, "end": 14.80, "probability": 0.96}]},
+    {"id": 5, "start": 17.5, "end": 18.2, "text": " Thanks all", "words": [
+      {"word": " Thanks", "start": 17.50, "end": 17.90, "probability": 0.97},
+      {"word": " all", "start": 17.90, "end": 18.20, "probability": 0.97}]}
+  ]
+}

@@ -1,0 +1,8 @@
+;; Synthetic practice data written by hand for speakerjoin. Not a real recording.
+;; RTTM columns: type file channel START DURATION <NA> <NA> speaker <NA> <NA>
+SPEAKER meeting 1 0.00 4.00 <NA> <NA> SPEAKER_00 <NA> <NA>
+SPEAKER meeting 1 4.00 3.50 <NA> <NA> SPEAKER_01 <NA> <NA>
+SPEAKER meeting 1 7.30 0.50 <NA> <NA> SPEAKER_02 <NA> <NA>
+SPEAKER meeting 1 8.00 4.00 <NA> <NA> SPEAKER_00 <NA> <NA>
+SPEAKER meeting 1 12.00 3.00 <NA> <NA> SPEAKER_02 <NA> <NA>
+SPEAKER meeting 1 16.00 1.00 <NA> <NA> SPEAKER_01 <NA> <NA>
