@@ -313,3 +313,31 @@ def test_empty_file_and_segment_fallback_notice(tmp_path, fx, capsys):
     out = tmp_path / "r.json"
     assert main([*argv, "--report", str(out), "-o", str(tmp_path / "o.srt")]) == 0
     assert json.loads(out.read_text(encoding="utf-8"))["options"]["effective_unit"] == "segment"
+
+
+@pytest.mark.parametrize("argv", [["--help"], ["merge", "--help"], ["report", "--help"],
+                                  ["demo", "--help"], ["formats", "--help"]])
+def test_argparse_headings_follow_lang(argv, capsys):
+    main(["--lang", "ko", *argv])
+    out = capsys.readouterr().out
+    assert "사용법:" in out and "옵션:" in out
+    assert "usage:" not in out and "options:" not in out and "optional arguments:" not in out
+    if argv[0] != "formats":
+        assert "위치 인자:" in out or argv[0] == "--help" or "positional arguments:" not in out
+    main(["--lang", "en", *argv])
+    out = capsys.readouterr().out
+    assert "usage:" in out and "options:" in out and "사용법" not in out
+
+
+def test_usage_error_line_is_localized(capsys):
+    assert main(["--lang", "ko", "merge"]) == 2
+    err = capsys.readouterr().err
+    assert err.startswith("사용법:") and "usage:" not in err
+    main(["--lang", "en", "merge"])
+    assert capsys.readouterr().err.startswith("usage:")
+
+
+def test_merge_help_has_korean_positional_heading(capsys):
+    main(["--lang", "ko", "merge", "--help"])
+    out = capsys.readouterr().out
+    assert "위치 인자:" in out and "positional arguments:" not in out

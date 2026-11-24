@@ -75,6 +75,9 @@ MESSAGES: dict[str, dict[str, str]] = {
         "summary.merge": "{words} words, {utterances} utterances, unassigned {unassigned}.",
         "threshold.failed": "Threshold exceeded: {detail}",
         "error.prefix": "error",
+        "argp.usage": "usage",
+        "argp.positionals": "positional arguments",
+        "argp.options": "options",
         "error.unknown_format": "Cannot detect the format of {label}. Supported: {supported}. "
         "Use --stt-format or --diar-format to force one.",
         "error.input": "Invalid input: {detail}",
@@ -198,6 +201,9 @@ MESSAGES: dict[str, dict[str, str]] = {
         "summary.merge": "단어 {words}개, 발화 {utterances}개, 미배정 {unassigned}개.",
         "threshold.failed": "임계값 초과: {detail}",
         "error.prefix": "오류",
+        "argp.usage": "사용법",
+        "argp.positionals": "위치 인자",
+        "argp.options": "옵션",
         "error.unknown_format": "{label} 의 형식을 알 수 없습니다. 지원 형식: {supported}. "
         "--stt-format 또는 --diar-format 으로 직접 지정하세요.",
         "error.input": "입력이 올바르지 않습니다: {detail}",

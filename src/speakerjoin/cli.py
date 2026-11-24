@@ -45,10 +45,37 @@ class _CliError(SpeakerJoinError):
         Exception.__init__(self, message)
 
 
-class _Parser(argparse.ArgumentParser):
-    """argparse with a localized, one-line usage error and exit code 2."""
+class _Formatter(argparse.HelpFormatter):
+    """Help formatter whose "usage:" prefix follows the display language."""
 
     lang = "en"
+
+    def add_usage(self, usage, actions, groups, prefix=None):  # type: ignore[no-untyped-def]
+        if prefix is None:
+            prefix = t(self.lang, "argp.usage") + ": "
+        super().add_usage(usage, actions, groups, prefix)
+
+
+class _Parser(argparse.ArgumentParser):
+    """argparse with localized headings, a one-line usage error and exit code 2."""
+
+    lang = "en"
+
+    def __init__(self, *args, **kwargs) -> None:  # type: ignore[no-untyped-def]
+        kwargs.setdefault("formatter_class", _Formatter)
+        super().__init__(*args, **kwargs)
+
+    def _get_formatter(self, *args, **kwargs):  # type: ignore[no-untyped-def]
+        formatter = super()._get_formatter(*args, **kwargs)
+        if isinstance(formatter, _Formatter):
+            formatter.lang = self.lang
+        return formatter
+
+    def localize_titles(self, lang: str) -> None:
+        """Apply the display language to the default argument group headings."""
+        self.lang = lang
+        self._positionals.title = t(lang, "argp.positionals")
+        self._optionals.title = t(lang, "argp.options")
 
     def error(self, message: str) -> NoReturn:
         self.print_usage(sys.stderr)
@@ -113,7 +140,7 @@ def _add_render(p: argparse.ArgumentParser, lang: str) -> None:
 
 def build_parser(lang: str) -> argparse.ArgumentParser:
     parser = _Parser(prog="speakerjoin", description=t(lang, "app.description"), add_help=False)
-    parser.lang = lang
+    parser.localize_titles(lang)
     parser.add_argument("-h", "--help", action="help", help=t(lang, "help.help"))
     parser.add_argument(
         "--version",
@@ -133,7 +160,7 @@ def build_parser(lang: str) -> argparse.ArgumentParser:
             add_help=False,
         )
         p.add_argument("-h", "--help", action="help", help=t(lang, "help.help"))
-        p.lang = lang  # type: ignore[attr-defined]
+        p.localize_titles(lang)  # type: ignore[attr-defined]
         p.add_argument("--lang", choices=LANGS, default=argparse.SUPPRESS, help=lang_help)
         return p
 

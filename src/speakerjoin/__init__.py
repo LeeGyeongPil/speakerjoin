@@ -33,7 +33,7 @@ from .model import (
 from .report import check_thresholds
 from .writers import to_json, to_markdown, to_srt, to_text, to_vtt
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 __all__ = [
     "AssignedWord",
