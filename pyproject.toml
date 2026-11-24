@@ -4,7 +4,7 @@ build-backend = "uv_build"
 
 [project]
 name = "speakerjoin"
-version = "0.1.0"
+version = "0.1.1"
 description = "Join speech-to-text output with speaker diarization into speaker-labelled transcripts and subtitles, with a numeric alignment quality report."
 readme = "README.md"
 license = "MIT"

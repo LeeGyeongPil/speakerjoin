@@ -4,6 +4,13 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+## [0.1.1] - 2026-11-25
+
+### Fixed
+- `--lang ko` now localizes the argparse headings (`사용법:`, `위치 인자:`, `옵션:`) in `--help` and usage errors.
+
 ## [0.1.0] - 2026-11-14
 
 ### Added
@@ -21,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Known issues
 
-**Some Korean argparse titles and OS error messages still appear in English; planned for a later release.**
+**Some OS error messages still appear in English in Korean mode; planned for a later release.**
 
+[0.1.1]: https://github.com/LeeGyeongPil/speakerjoin/releases/tag/v0.1.1
 [0.1.0]: https://github.com/LeeGyeongPil/speakerjoin/releases/tag/v0.1.0
